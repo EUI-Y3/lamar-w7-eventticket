@@ -1,29 +1,32 @@
 import React from 'react';
 import './why.css';
+import { useTranslation } from 'react-i18next';
 import fastIcon from '../assets/icons/fast.png';
 import trustIcon from '../assets/icons/trust.png';
 import mailIcon from '../assets/icons/mail.png';
 import pricesIcon from '../assets/icons/prices.png';
 
-const features = [
-  { id: 1, icon: fastIcon, title: 'Easy Booking', desc: 'Book your tickets in just a few clicks' },
-  { id: 2, icon: trustIcon, title: 'Trusted Events', desc: 'All events are verified and secure' },
-  { id: 3, icon: mailIcon, title: 'Instant Confirmation', desc: 'Get your tickets immediately via email' },
-  { id: 4, icon: pricesIcon, title: 'Best Prices', desc: 'Exclusive deals and student discounts' },
-];
-
-const stats = [
-  { id: 1, value: '98%', label: 'Customer Satisfaction' },
-  { id: 2, value: '24/7', label: 'Support Available' },
-  { id: 3, value: '100K+', label: 'Tickets Sold' },
-  { id: 4, value: '500+', label: 'Partner Venues' },
-];
-
 const Why = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    { id: 1, icon: fastIcon, title: t('easyBooking'), desc: t('easyBookingDesc') },
+    { id: 2, icon: trustIcon, title: t('trustedEvents'), desc: t('trustedEventsDesc') },
+    { id: 3, icon: mailIcon, title: t('instantConfirmation'), desc: t('instantConfirmationDesc') },
+    { id: 4, icon: pricesIcon, title: t('bestPrices'), desc: t('bestPricesDesc') },
+  ];
+
+  const stats = [
+    { id: 1, value: '98%', label: t('whySubtext') },
+    { id: 2, value: '24/7', label: t('stayUpdated') },
+    { id: 3, value: '100K+', label: t('eventsHosted') },
+    { id: 4, value: '500+', label: t('eventCategories') },
+  ];
+
   return (
     <section className="why">
-      <h2>Why Choose Our Platform?</h2>
-      <p className="why-subtext">We make it easy to discover and attend the best events in your city</p>
+      <h2>{t('whyTitle')}</h2>
+      <p className="why-subtext">{t('whySubtext')}</p>
       <div className="why-underline"></div>
 
       <div className="why-grid">
