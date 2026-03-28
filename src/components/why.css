@@ -1,0 +1,160 @@
+.why {
+  background: #0d0d1f;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.why-subtext {
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.why-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4ff, #ff00c8);
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.why-card {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.1);
+}
+
+.why-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.why-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.why-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.why-card:nth-child(1) { animation-delay: 0.1s; }
+.why-card:nth-child(2) { animation-delay: 0.2s; }
+.why-card:nth-child(3) { animation-delay: 0.3s; }
+.why-card:nth-child(4) { animation-delay: 0.4s; }
+
+.why-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 24px 40px;
+  width: calc(25% - 18px);
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  background: linear-gradient(90deg, #00d4ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .why {
+    padding: 60px 24px;
+  }
+
+  .why h2 {
+    font-size: 30px;
+  }
+
+  .why-card {
+    width: 100%;
+  }
+
+  .stat-card {
+    width: calc(50% - 12px);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .why h2 {
+    font-size: 24px;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
