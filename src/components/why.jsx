@@ -10,17 +10,53 @@ const Why = () => {
   const { t } = useTranslation();
 
   const features = [
-    { id: 1, icon: fastIcon, title: t('easyBooking'), desc: t('easyBookingDesc') },
-    { id: 2, icon: trustIcon, title: t('trustedEvents'), desc: t('trustedEventsDesc') },
-    { id: 3, icon: mailIcon, title: t('instantConfirmation'), desc: t('instantConfirmationDesc') },
-    { id: 4, icon: pricesIcon, title: t('bestPrices'), desc: t('bestPricesDesc') },
+    {
+      id: 1,
+      icon: fastIcon,
+      title: t('easyBooking'),
+      desc: t('easyBookingDesc'),
+    },
+    {
+      id: 2,
+      icon: trustIcon,
+      title: t('trustedEvents'),
+      desc: t('trustedEventsDesc'),
+    },
+    {
+      id: 3,
+      icon: mailIcon,
+      title: t('instantConfirmation'),
+      desc: t('instantConfirmationDesc'),
+    },
+    {
+      id: 4,
+      icon: pricesIcon,
+      title: t('bestPrices'),
+      desc: t('bestPricesDesc'),
+    },
   ];
 
   const stats = [
-    { id: 1, value: '98%', label: t('whySubtext') },
-    { id: 2, value: '24/7', label: t('stayUpdated') },
-    { id: 3, value: '100K+', label: t('eventsHosted') },
-    { id: 4, value: '500+', label: t('eventCategories') },
+    {
+      id: 1,
+      value: '98%',
+      label: t('whySubtext'),
+    },
+    {
+      id: 2,
+      value: '24/7',
+      label: t('stayUpdated'),
+    },
+    {
+      id: 3,
+      value: '100K+',
+      label: t('eventsHosted'),
+    },
+    {
+      id: 4,
+      value: '500+',
+      label: t('eventCategories'),
+    },
   ];
 
   return (

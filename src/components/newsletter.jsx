@@ -7,7 +7,7 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
 
   const handleSubscribe = () => {
-    if (email) {
+    if (email.trim()) {
       alert(`${t('subscribe')} - ${email}!`);
       setEmail('');
     }

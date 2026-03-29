@@ -1,9 +1,11 @@
+
 import React, { useState } from 'react';
 import './booking.css';
 import { useTranslation } from 'react-i18next';
 
 const Booking = () => {
   const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,7 +14,10 @@ const Booking = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = () => {
@@ -60,7 +65,11 @@ const Booking = () => {
 
         <div className="form-group">
           <label>{t('selectEvent')}</label>
-          <select name="event" value={formData.event} onChange={handleChange}>
+          <select
+            name="event"
+            value={formData.event}
+            onChange={handleChange}
+          >
             <option value="">-- {t('selectEvent')} --</option>
             <option value="summer-music">Summer Music</option>
             <option value="edm-night">Electronic Dance Night</option>

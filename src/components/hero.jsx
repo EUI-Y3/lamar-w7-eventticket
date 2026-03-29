@@ -8,16 +8,21 @@ const Hero = () => {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en');
-    document.body.dir = i18n.language === 'en' ? 'rtl' : 'ltr';
+    const newLang = i18n.language === 'en' ? 'ar' : 'en';
+
+    i18n.changeLanguage(newLang);
+
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = newLang;
   };
 
   return (
     <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
+      
       <nav className="navbar">
         <div className="logo">
           <img src={logo} alt="logo" />
-          <span>EvenTix</span>
+        
         </div>
 
         <ul className="nav-links">
@@ -58,6 +63,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
